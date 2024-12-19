@@ -1,0 +1,52 @@
+.main {
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 100px;
+    position: relative;
+}
+
+.around {
+    display: inline-block;
+    position: relative;
+}
+
+.around .in {
+    position: relative;
+    z-index: 1;
+}
+
+.around .in img {
+    display: block;
+    position: relative;
+    border: 10px solid lightgray;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+}
+
+.around::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-right: 15px solid rgb(206, 155, 164);
+    border-left: 15px solid rgb(206, 155, 164);
+    border-radius: 35%;
+    z-index: 2;
+}
+.around::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 15px solid pink;
+    border-bottom: 15px solid pink;
+    border-radius: 35%;
+    z-index: 0;
+}
